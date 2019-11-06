@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,Chrome=1,requiresActiveX=true" />
+<link rel="stylesheet" type="text/css" href="./css/style.css">
+<title>Satoshi's Treasure - Agent Hunter</title>
+</head>
+<body>
+<div class="container">
+
+<pre>
+ _____       _            _     _ _       _____
+/  ___|     | |          | |   (_| )     |_   _|
+\ `--.  __ _| |_ ___  ___| |__  _|/ ___    | |_ __ ___  __ _ ___ _   _ _ __ ___
+ `--. \/ _` | __/ _ \/ __| '_ \| | / __|   | | '__/ _ \/ _` / __| | | | '__/ _ \
+/\__/ / (_| | || (_) \__ \ | | | | \__ \   | | | |  __/ (_| \__ \ |_| | | |  __/
+\____/ \__,_|\__\___/|___/_| |_|_| |___/   \_/_|  \___|\__,_|___/\__,_|_|  \___|
+
+Research Assistance - Agent Hunter
+</pre>
+<div class="box-pre">
+  <div class="index-what-pre">
+    <p>SELECT AN IMAGE BY CLICKING THE BUTTON BELOW AND I WILL AUTOMATICALLY CHECK IF IT IS ONE OF THE AGENTS</p>
+
+    <label id="preview-label" for="preview-input">CHECK AGENT</label>
+    <input id="preview-input" type="file" onchange="previewFile()"><br>
+    <img id="preview" src="" height="200" style="display: none;">
+    
+  </div>
+  <div class="table-pre">
+    <div class="rows">
+      <p id="status">Loading agent models</p>
+    </div>
+</div>
+</div>
+
+<script src="./js/face-api.js"></script>
+
+<!-- APP -->
+<script src="./js/recognition.js"></script>
+
+<script>
+  var w1 = document.querySelector('.container').clientWidth;
+  var w2 = window.screen.availWidth;
+  var meta = document.createElement('meta');
+  meta.setAttribute('name', 'viewport');
+  meta.setAttribute('content', 'width=device-width,initial-scale=' + (w2/w1));
+  document.getElementsByTagName('head')[0].appendChild(meta);
+</script>
+</body>
+</html>
